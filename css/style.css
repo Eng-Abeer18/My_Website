@@ -447,7 +447,7 @@ ul {
 
 .about-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     gap: 1.5rem;
 }
 
@@ -610,6 +610,7 @@ ul {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 2rem;
 }
 
@@ -770,6 +771,10 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .about-content {
+        padding: 1.5rem;
+    }
+
     .mobile-menu-toggle {
         display: flex;
     }
@@ -842,6 +847,14 @@ ul {
 }
 
 @media (max-width: 480px) {
+    .about .container {
+        padding-inline: 1rem;
+    }
+
+    .about-content {
+        padding: 1.25rem;
+    }
+
     .hero-greeting {
         font-size: 1.2rem;
     }
